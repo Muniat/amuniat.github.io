@@ -476,8 +476,8 @@ animation: fadeInAnimation ease 3s;
   }
 
   .catphoto, .catsImg img{
-    width:  400px;
-    height: 400px;
+    width:  300px;
+    height: 300px;
     object-fit: cover;
     align-items: center;
     align-content: center;
