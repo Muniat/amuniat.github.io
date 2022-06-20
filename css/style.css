@@ -468,7 +468,7 @@ animation: fadeInAnimation ease 3s;
 }
 
 /*styling img/gif fetched */
-	.catsImg{
+	.catsImg, #bcat{
   display: flex;
 	align-items: center;
 	justify-content: center;
