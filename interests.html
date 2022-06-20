@@ -108,14 +108,17 @@
       <h1 class="heading">Cats</h1> <!--Cats, use of Vue and JS in this section-->
       <section id="catPics" class="myCat">
         <p>I am obsessed with cats. I have a pet cat named Billu, who's been with me for almost 4 years now.
-          Here's a photo of her - </p>
+          Here's some photos of her - <a class="p-int" @click="show = !show" :aria-expanded="show ? 'true' : 'false'">View Photos</a></p>
           
-        <figure class="gallery-row"> 
+        <figure v-if="show" class="gallery-row"> 
           <figure class="gallery-column">
             <img class="catphoto" src="images/cat1.JPG" alt="cat" onclick="myFunc(this);">
           </figure>
           <figure class="gallery-column">
             <img class="catphoto" src="images/cat2.JPG" alt="cat" onclick="myFunc(this);">
+          </figure>
+          <figure class="gallery-column">
+            <img class="catphoto" src="images/cat3.JPG" alt="cat" onclick="myFunc(this);">
           </figure>
           <figure class="gallery-column">
             <img class="catphoto" src="images/cat3.JPG" alt="cat" onclick="myFunc(this);">
@@ -155,6 +158,14 @@
      show: false
      },
     })
+    new Vue({
+    el: '#catPics',
+    data: {
+     show: false
+     },
+    })
+    
+
 
  </script>
    
