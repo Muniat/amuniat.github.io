@@ -479,5 +479,7 @@ animation: fadeInAnimation ease 3s;
     width:  400px;
     height: 400px;
     object-fit: cover;
+    align-items: center;
+    align-content: center;
   }
 
