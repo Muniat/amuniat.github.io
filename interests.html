@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Biography</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--font-awesome-->
+  <script src="https://kit.fontawesome.com/6f8a5347a6.js" crossorigin="anonymous"></script>
+  <!-- css file link-->
+  <link rel="stylesheet" href="css/style.css">
+  <!--Adding JavaScript-->
+  <script src="js/index.js"></script>
+  <!-- Adding Vue-->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+  <script src="https://unpkg.com/vuex"></script>
+</head>
+
+<body>
+    <!-- to navigate through different pages of the site -->
+    <nav>
+        <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+            <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+            <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="experiences.html">Experiences</a></li>
+            <li class="nav-item"><a class="nav-link nav-active" href="interests.html">Interests</a></li>
+            <li class="nav-right"><a href="mailto:amuniat@bu.edu" aria-label="Send me an email"><i class="fa fa-envelope-square gm-icon nav-profile-icons" aria-hidden="true"></i></a></li>
+            <li class="nav-right"><a href="https://scholar.google.com/citations?user=zzZ3oh8AAAAJ" target="_blank" title="Google Scholar" aria-label="visit my Google Scholar account"><i class="fas fa-user-graduate nav-profile-icons" aria-hidden="true"></i></a></li>
+            <li class="nav-right"><a href="https://bitbucket.org/Ayman_Muniat" target="_blank" title="BitBucket" aria-label="visit my BitBucket account for projects"><i class="fa-brands fa-bitbucket nav-profile-icons" aria-hidden="true"></i></a></li>
+            <li class="nav-right"><a href="https://www.linkedin.com/in/ayman-muniat-037b861a0/" target="_blank" title="LinkedIn" aria-label="Connect with me on LinkedIn"><i class="fab fa-linkedin nav-profile-icons" aria-hidden="true"></i></a></li>
+        </ul>
+    
+
+    </nav>
+    <section class="int">
+    
+    <section class="books"> <!--Books, use of Vue and JS in this section-->
+        <h1 class="heading">Books</h1>
+
+        <p>In my free time, I love to read novels. I mostly read fictions, of almost all genres. But I've also enjoyed a few non-fiction or literary fiction books.</p>
+        <p>I'd like to share 2 of my favorite books, which I think everyone should give a try:
+            <section class="mocking-bird">
+                <h3>1. How To Kill a Mocking Bird</h3>
+                <p>This book by Harper Lee, follows the childhood of two kids whose lawyer father defends a black man against false accusations. It opened my eye to the harsh
+                reality of racism that is still prevalent in the world. </p>
+                <p>There's a reason why this book is a winner, made into a movie and included in most school readings. <a class="p-int" href="https://www.goodreads.com/book/show/2657.To_Kill_a_Mockingbird"  
+                    target="_blank">Learn More</a></p>
+                
+            </section>
+            <section class="homo-sapiens">
+                <h3>2. Homo Sapiens</h3>
+                <p>Homo sapiens was an enlightening and surprisingly pleasant read that took me through a journey about the evolution of human kind, and the impact we as a species have
+                on this planet and it's other inhabitants.</p> <p>It has helped me gain insight on many things in life that I will now be more mindful of, thanks to this book. <a class="p-int"
+                    href="https://www.goodreads.com/book/show/23692271-sapiens"
+                     target="_blank">Learn More</a></p>
+                
+            </section>
+    
+    </section>
+    <section class="travel"> <!--Travel, Use of Vue and JS in this section-->
+        
+        <h1 class="heading">Travel</h1>
+        
+        <section id="showPhoto" class="tr">
+        <p> I'm also very much fond of travelling. I've visited all over my country and everyone definitely needs to know more about the beauty of
+            Bangladesh. Apart from my own, I have only been to 4 countries so far - Malaysia, Singapore, Maldives and Thailand.
+            But I surely plan on visiting more countries and maybe even a world tour one day. 1-2 visits abroad a year is one of my goals. 
+            You can check some of my travel photos here- <a class="p-int" @click="show = !show" :aria-expanded="show ? 'true' : 'false'">View Photos</a>
+        </p>
+        
+            
+
+        <!--Four columns of pictures-->
+        
+        <figure v-if="show" class="gallery-row">
+            <figure class="gallery-column">
+              <img src="images/1.jpg"  alt="Park in Langkawi, Malaysisa" onclick="myFunction(this);">
+            </figure>
+            <figure class="gallery-column">
+              <img src="images/2.jpg"  alt="Sunset in Chittagong, Bangladesh" onclick="myFunction(this);">
+            </figure>
+            <figure class="gallery-column">
+              <img src="images/6.JPG" alt="Breakfast in front of beach, Maldives" onclick="myFunction(this);">
+            </figure>
+            <figure class="gallery-column">
+              <img src="images/12.jpg" alt="Water Lily in Thailand" onclick="myFunction(this);">
+            </figure>
+        </figure>
+          
+        
+          <!-- The expanding image container -->
+          <figure class="img-container">
+            <!-- Close the image -->
+            <span onclick="this.parentElement.style.display='none'" class="closeButton">&times;</span>
+          
+            <!-- Expanded image, set through Javascript-->
+            <figure class="expandedImg"></figure>
+          
+            <!-- Image text, set through Javascript-->
+            <figure id="imgtext"></figure>
+          </figure>
+          
+        </section>
+    </section>
+    <section class="cats">
+      <h1 class="heading">Cats</h1> <!--Cats, use of Vue and JS in this section-->
+      <section id="catPics" class="myCat">
+        <p>I am obsessed with cats. I have a pet cat named Billu, who's been with me for almost 4 years now.
+          Check out some of her photos - </p>
+          <p><a class="p-int" @click="show = !show" :aria-expanded="show ? 'true' : 'false'">View Photos</a>
+        </p>
+        <figure v-if="show" class="gallery-row"> 
+          <figure class="gallery-column">
+            <img class="catphoto" src="images/cat1.jpg"  alt="cat" onclick="myFunc(this);">
+          </figure>
+          <figure class="gallery-column">
+            <img class="catphoto" src="images/cat2.jpg" alt="cat" onclick="myFunc(this);">
+          </figure>
+          <figure class="gallery-column">
+            <img class="catphoto" src="images/cat3.JPG" alt="cat" onclick="myFunc(this);">
+          </figure>
+          <figure class="gallery-column">
+            <img class="catphoto" src="images/cat4.jpg" alt="cat" onclick="myFunc(this);">
+          </figure>
+      </figure>
+        
+      
+        <!-- The expanding image container -->
+        <figure class="img-container">
+          <!-- Close the image -->
+          <span onclick="this.parentElement.style.display='none'" class="closeButton">&times;</span>
+        
+          <!-- Expanded image, set through Javascript-->
+          <figure class="expandedImg1"></figure>
+        
+          <!-- Image text, set through Javascript -->
+          <figure id="imgtext1"></figure>
+        
+        </figure>
+      </section>
+      <!--generate random cat pic/gif, utilises ES6 -->
+      <section class="random">
+      <p> If you too are a cat lover, <a class="p-int" onclick="fetchPics(this)">Click for a surprise</a></p>
+      <figure class="catsImg"></figure>
+      </section>
+    </section>
+</section>
+  
+
+
+   <!--Vue--> 
+ <script>
+    new Vue({
+    el: '#showPhoto',
+    data: {
+     show: false
+     },
+    })
+
+    new Vue({
+      el: '#catPics',
+      data: {
+        show: false
+      }
+    })
+
+
+
+
+
+
+ </script>
+    
+</body>
+</html>

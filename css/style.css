@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+
+/* base styling for all pages */
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    
+}
+/*fade in effect*/ 
+section {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+} 
+
+.heading {
+  font-size: 2rem;
+  color:rgb(186, 88, 160);
+  border-bottom: solid 2.5px rgb(186, 88, 160);
+}
+
+a{
+    color:rgb(186, 88, 160);
+}
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgb(186, 88, 160);
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .nav-item {
+    float: left;
+  }
+  .nav-right{
+    float:right;
+  }
+  
+  .nav-link{
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+   .nav-profile-icons {
+    display: block;
+    color:white;
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.2rem;
+    
+   }
+
+ 
+  
+  .nav-link:hover, .nav-profile-icons:hover{
+    background-color:rgb(208, 123, 184);
+  }
+  /*responsive nav*/
+  @media screen and (max-width: 500px) {
+    .nav-item{
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .nav-right {
+      float: none;
+    }
+  }
+
+  .nav-active {
+    background-color: #931479;
+  }
+  img{
+    max-width: 90%;
+    height: auto;
+  }
+
+
+  /* about page */
+  .uni:hover{
+    color:rgb(208, 123, 184);
+  }
+ .about-flex{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   padding-top: 75px;
+   
+ }
+
+ .para p{
+
+  font-size: 1.2rem;
+ }
+ .sd{
+  flex: 30%;
+  padding-left: 25px;
+  padding-top: 25px;
+  
+ }
+ .para{
+  flex: 50%;
+  padding-right: 30px;
+  padding-top: 20px;
+ }
+
+ #cv{
+   padding-left: 50px;
+ }
+
+ .btn{
+  padding: 0.8rem 3rem;
+  background: rgb(186, 88, 160);
+  color: #fff;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  border-radius: 2rem;
+  align-content: center;
+  
+  
+ }
+ .cv-btn i {
+  padding: 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.cv-btn:hover{
+  background: rgb(208, 123, 184);;
+}
+
+/*responsive flex layout */
+ @media (max-width: 500px) {
+  .sd, .para{
+    flex: 100%;
+  }
+ }
+
+ @media (max-width: 800px) {
+  .sd, .para {
+    flex: 85%;
+  }
+ }
+  /* academics page */
+  /* images in academics page using flex */
+
+  .row {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+  
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+
+  
+
+  .education pre{
+    font-size: 1.2rem;
+  }
+ 
+   .education h3{
+     font-size: 1.3rem;
+     padding-left: 20px;
+     color: rgb(186, 88, 160);
+   }
+  
+  
+   .project p{
+     font-size: 1.2rem;
+   }
+
+   .project figcaption{
+     font-size: 1rem;
+   }
+
+   .cg{
+    color: rgb(186, 88, 160);
+   }
+
+   .project h3{
+    color: rgb(186, 88, 160);
+    font-size: 1.3rem;
+   }
+  
+  .project-1, .project-2{
+    border-bottom: solid 1.5px rgb(186, 88, 160);
+  }
+  
+  .education, .project, .publication, .experience, .int, .skill{
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    
+   }
+
+   @media (min-width: 500px){
+     .education, .project, .publication, .experience, .int{
+       width: 100%;
+     }
+   }
+
+   @media (min-width: 700px){
+     .education, .project, .publication, .experience, .int{
+       width: 85%;
+     }
+   }
+
+/* publications page */
+   .publication h2 {
+    font-size: 1.5rem;
+    display: inline;
+  }
+
+ .publication h4 {
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+ }
+ .publication h3 {
+    font-size: 1.25rem;
+ }
+ .publication-1{
+  border-bottom: solid 1.5px rgb(186, 88, 160);
+ }
+ 
+ .doi {
+    margin-bottom: 2rem;
+ }
+ .ddos{
+  max-height: 500px;
+  max-width: 500px;
+  margin-right: 20px;
+  margin-bottom: 3rem;
+ }
+
+ .blockchain{
+  max-height: 500px;
+  max-width: 500px;
+  margin-right: 20px;
+ }
+ @media (max-width: 550px) {
+  .ddos {
+      margin-bottom: 2rem;
+      max-height: 300px;
+      max-width: 300px;
+  }
+  .blockchain{
+    max-height: 300px;
+    max-width: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .publication .heading {
+      font-size: 1.5rem;
+  }
+  section.publication h2 {
+      font-size: 1.2rem;
+  }
+  section.publication h4 {
+      font-size: 1rem;
+  }
+  section.publication h3 {
+      font-size: 1rem;
+  }
+}
+  
+/* skills page */
+
+.skill h3{
+font-size: 1.5rem;
+color: rgb(186, 88, 160);
+}
+.skill i {
+    font-size: 1.5rem;
+    margin-right: 7px;
+}
+.skill ul li{
+    font-size: 1.5rem;
+    margin-left: 4rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item-left {
+  flex: 50%;
+}
+
+.flex-item-right {
+  flex: 50%;
+}
+
+@media (max-width: 800px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .flex-item-right, .flex-item-left {
+    flex: 80%;
+  }
+  .skill .heading {
+      font-size: 1.5rem;
+  }
+  .skill h3 {
+      font-size: 1.2rem;
+  }
+  .skill i {
+      font-size: 1.2rem;
+  }
+  .skill ul li {
+      font-size: 1rem;
+      margin-left: 3rem;
+  }
+
+}
+
+/*experiences page*/
+
+.left {
+  float: left;
+  margin-right: 25px;
+}
+
+.right {
+  margin-top: 5px;
+  float: left;
+}
+.experience-heading{
+  color: rgb(186, 88, 160);
+}
+
+.experience img {
+  height: 11rem;
+  width: 11rem;
+}
+.work-1{
+  border-bottom: solid 1.5px rgb(186, 88, 160);
+}
+.work-row{
+  display: flex;
+  flex-direction: column;
+}
+
+/*interests page*/
+.int{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.int p, .books h4{
+  font-size: 1.2rem;
+}
+
+.int a, .project a{
+  color: rgb(186, 88, 160);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.p-int:hover{
+  color:rgb(208, 123, 184);
+}
+
+
+
+/* Four equal columns that floats next to each other for travel and cats */
+.gallery-column {
+  float: left;
+  width: 20%;
+  padding: 10px;
+}
+
+/* Styling images inside the grid */
+.gallery-column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.gallery-column img:hover {
+  opacity: 1;
+}
+
+
+.gallery-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.img-container {
+  position: relative;
+  display: none;
+}
+
+
+/* Expanding image text */
+#imgtext, #imgtext1 {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 25px;
+}
+
+/* Closable button inside the image */
+.closeButton {
+  position: absolute;
+  top: 10px;
+  color: rgb(113, 8, 43);;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+   .gallery-column{
+    width: 100%;
+  }
+}
+.gallery-row, .img-container, .row, .column{
+animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  
+  
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+} 
+.books h3 {
+  color: rgb(186, 88, 160);
+}
+
+#expandedImg, #expandedImg1{
+  width: auto;
+  height: 70%;
+}
+
+/*styling img/gif fetched */
+	.catsImg{
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  padding-top: 10px;
+  }
+
+  .catphoto, .catsImg img{
+    width:  300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
